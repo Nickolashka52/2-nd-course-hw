@@ -1,0 +1,46 @@
+@media (max-width: 376px) {
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        height: 700px;
+        background-image: url(Images/top_stars_mobile_1.svg), url(Images/top_stars_mobile_2.svg), url(Images/top_stars_mobile_3.svg);
+        background-position: calc(100% - 252px) calc(100% - 566px), calc(100% - 48px) calc(100% - 88px), calc(100% + 91px) calc(100% - 549px);
+
+        &__title {
+            padding-top: 147px;
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__text_mobile {
+            display: block;
+        }
+
+        &__button-box {
+            text-align: center;
+        }
+
+        &__button {
+            width: 285px;
+            height: 55px;
+            padding: 16px 103.5px;
+            font-size: 16px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+    }
+
+    .gamesDiscriptions {
+        display: none;
+    }
+}

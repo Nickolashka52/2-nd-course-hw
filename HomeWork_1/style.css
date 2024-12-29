@@ -48,6 +48,23 @@ body {
 .top__text > span {
   font-weight: 600;
 }
+.top__text_mobile {
+  display: none;
+  margin-bottom: 48px;
+  color: rgb(32, 32, 39);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.top__text_mobile > span {
+  font-weight: 600;
+}
+.top__button-box {
+  text-align: left;
+}
 .top__button {
   display: inline-block;
   width: 247px;
@@ -150,4 +167,42 @@ body {
   line-height: 39px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+@media (max-width: 376px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 700px;
+    background-image: url(Images/top_stars_mobile_1.svg), url(Images/top_stars_mobile_2.svg), url(Images/top_stars_mobile_3.svg);
+    background-position: calc(100% - 252px) calc(100% - 566px), calc(100% - 48px) calc(100% - 88px), calc(100% + 91px) calc(100% - 549px);
+  }
+  .top__title {
+    padding-top: 147px;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+  }
+  .top__text {
+    display: none;
+  }
+  .top__text_mobile {
+    display: block;
+  }
+  .top__button-box {
+    text-align: center;
+  }
+  .top__button {
+    width: 285px;
+    height: 55px;
+    padding: 16px 103.5px;
+    font-size: 16px;
+    text-align: center;
+    pointer-events: none;
+  }
+  .gamesDiscriptions {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
