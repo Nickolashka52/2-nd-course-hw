@@ -43,14 +43,17 @@ let result = getSquare(3);
 
 function checkAge() {
     let userAge = Number(prompt("Сколько вам лет?"));
+
     if (userAge < 0) {
         console.log("Вы ввели неправильное значение");
-    } else {
-        if (userAge > 12) {
-            console.log("Добро пожаловать!");
-        } else {
-            console.log("Привет, друг!");
-        }
+    }
+
+    if (userAge >= 0 && userAge <= 12) {
+        console.log("Привет, друг!");
+    }
+
+    if (userAge > 12) {
+        console.log("Добро пожаловать!");
     }
 };
 
@@ -77,7 +80,7 @@ function checkingCubing(n) {
     if (isNaN(userEntered)) {
         return 'Переданный параметр не является числом';
     } else {
-        let userEnteredCub = userEntered * userEntered * userEntered;
+        let userEnteredCub = userEntered ** 3;
         return `${userEntered} в кубе равняется ${userEnteredCub}`;
     }
 };
@@ -89,20 +92,20 @@ console.log(checkingCubing());
 const circle1 = {
     radius1: 3,
     getArea() {
-        return 3.14 * this.radius1 * this.radius1;
+        return Math.PI * this.radius1 * this.radius1;
     },
     getPerimeter() {
-        return 2 * 3.14 * this.radius1;
+        return 2 * Math.PI * this.radius1;
     }
 };
 
 const circle2 = {
     radius2: 7,
     getArea() {
-        return 3.14 * this.radius2 * this.radius2;
+        return Math.PI * this.radius2 * this.radius2;
     },
     getPerimeter() {
-        return 2 * 3.14 * this.radius2;
+        return 2 * Math.PI * this.radius2;
     }
 };
 
