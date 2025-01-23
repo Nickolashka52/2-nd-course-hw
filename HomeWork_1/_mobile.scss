@@ -30,17 +30,32 @@
         }
 
         &__button {
-            width: 285px;
-            height: 55px;
-            padding: 16px 103.5px;
-            font-size: 16px;
-            text-align: center;
-            pointer-events: none;
+            display: none;
         }
 
+        &__button-mobile {
+            display: inline-block;
+        }
     }
 
-    .gamesDiscriptions {
+    .games-discriptions {
         display: none;
+    }
+
+    .mini-games {
+        display: none;
+    }
+
+    .mini-games-mobile {
+        display: block;
+    }
+
+    .footer {
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
     }
 }
