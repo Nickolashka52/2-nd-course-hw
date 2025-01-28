@@ -16,9 +16,16 @@ for (let iTask2 = 0; iTask2 < arrayTask2.length; iTask2++) {
     };
 };
 
+
 const arrayTask2Version2 = [1, 5, 4, 10, 0, 3];
 const arrayTask2Version2Index = arrayTask2Version2.indexOf(4);
 console.log(arrayTask2Version2Index);
+
+
+const arrayTask2Version3 = [1, 5, 4, 10, 0, 3];
+const valueToFind = 4;
+const index = arrayTask2Version3.findIndex(element => element === valueToFind);
+console.log(index);
 
 //Задание №3
 
@@ -70,11 +77,18 @@ splitArrayTask8.reverse();
 let joinArrayTask8 = splitArrayTask8.join("")
 console.log(joinArrayTask8);
 
+const arrayTask8Version2 = 'abcdef';
+let joinArrayTask8Version2 = arrayTask8Version2.split("").reverse().join("");
+console.log(joinArrayTask8Version2);
+
 //Задание №9
 
 const arrayTask9 = [[1, 2, 3], [4, 5, 6]];
 const flatArrayTask9 = [].concat(...arrayTask9);
 console.log(flatArrayTask9);
+
+const arrayTask9Version2 = [[1, 2, 3], [4, 5, 6]];
+console.log(arrayTask9Version2.flat());
 
 //Задание №10
 
