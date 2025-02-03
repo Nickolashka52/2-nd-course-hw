@@ -78,19 +78,15 @@ function turnTheTextOver() {
     let userInput = prompt("Введите текст, который нужно перевернуть:");
 
     if (userInput !== null) {
-        const reversed = userInput.split('').reverse().join('').toLowerCase();
+
+        const reversed = userInput.split('').reverse().join('');
 
         if (/[.!?]/.test(reversed)) {
             let firstChar = reversed.charAt(0);
             let reversedWithTransferredPunctuationMark = reversed.substring(1) + firstChar;
-            let reversedWithTransferredPunctuationMarkCapitalized = reversedWithTransferredPunctuationMark.charAt(0).toUpperCase() + reversedWithTransferredPunctuationMark.slice(1);
-            alert("Перевёрнутый текст: " + reversedWithTransferredPunctuationMarkCapitalized);
-
+            alert("Перевёрнутый текст: " + reversedWithTransferredPunctuationMark);
         } else {
-
-            let reversedCapitalized = reversed.charAt(0).toUpperCase() + reversed.slice(1);
-            alert("Перевёрнутый текст: " + reversedCapitalized);
-
+            alert("Перевёрнутый текст: " + reversed);
         }
 
     } else {

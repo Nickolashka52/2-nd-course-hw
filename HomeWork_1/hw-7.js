@@ -7,11 +7,12 @@ console.log(stringTask1.toUpperCase());
 
 const arrStringsTask2 = ['Барбарисовый маринад', 'Фиолетовый домкрат', 'Железная доска'];
 const stringTask2 = 'фиолетовый';
-arrStringsTask2.forEach((element) => {
-    if (element.toLowerCase().startsWith(stringTask2.toLowerCase())) {
-        console.log(element);
-    }
-});
+
+const filteredResults = arrStringsTask2.filter((element) =>
+    element.toLowerCase().startsWith(stringTask2.toLowerCase())
+);
+
+console.log(filteredResults);
 
 //Задание №3
 
