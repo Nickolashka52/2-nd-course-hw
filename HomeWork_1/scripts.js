@@ -1,4 +1,4 @@
-// Игра угадай число
+// Игра "Угадай число"
 function guessTheNumber() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     let userNumber = 0;
@@ -18,7 +18,7 @@ function guessTheNumber() {
     }
 };
 
-// Игра простая арифметика
+// Игра "Простая арифметика"
 function simpleArithmetic() {
 
     function getRandomNumber(max) {
@@ -70,4 +70,68 @@ function simpleArithmetic() {
             alert(`Ошибка. Правильный ответ: ${correctAnswer}`);
         }
     };
+};
+
+// Игра "Переверни текст"
+function turnTheTextOver() {
+
+    let userInput = prompt("Введите текст, который нужно перевернуть:");
+
+    if (userInput !== null) {
+
+        const reversed = userInput.split('').reverse().join('');
+
+        if (/[.!?]/.test(reversed)) {
+            let firstChar = reversed.charAt(0);
+            let reversedWithTransferredPunctuationMark = reversed.substring(1) + firstChar;
+            alert("Перевёрнутый текст: " + reversedWithTransferredPunctuationMark);
+        } else {
+            alert("Перевёрнутый текст: " + reversed);
+        }
+
+    } else {
+        alert("Вы не ввели текст.");
+    }
+
+}
+
+// Игра "Викторина"
+function simpleQuiz() {
+
+    const quiz = [
+        {
+            question: "Какой цвет у неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let score = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+        const currentQuestion = quiz[i];
+        let optionsText = currentQuestion.options.join('\n');
+        let userAnswer = Number(prompt(currentQuestion.question + '\n' + optionsText));
+
+        if (userAnswer === null) {
+            alert("Вы вышли из викторины.");
+            return;
+        }
+
+        if (userAnswer === currentQuestion.correctAnswer) {
+            score++;
+        }
+    }
+
+    alert("Вы ответили правильно на " + score + " из " + quiz.length + " вопросов.");
 };
