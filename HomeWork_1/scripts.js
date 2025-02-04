@@ -135,3 +135,46 @@ function simpleQuiz() {
 
     alert("Вы ответили правильно на " + score + " из " + quiz.length + " вопросов.");
 };
+
+// Игра "Камень, ножницы, бумага"
+function stoneScissorsPaper() {
+
+    let userInput = prompt(`Сыграем в игру "камень, ножницы, бумага". Что выбирете?`);
+    const options = ["камень", "ножницы", "бумага"];
+
+    if (userInput !== null) {
+
+        function getRandomChoice() {
+            const randomIndex = Math.floor(Math.random() * options.length);
+            return options[randomIndex];
+        }
+        const computerChoice = getRandomChoice();
+        const lowerCaseUserInput = userInput.toLowerCase();
+
+        function isValidChoice(userInput) {
+            return options.includes(lowerCaseUserInput);
+        }
+
+        if (isValidChoice(userInput)) {
+
+            if (lowerCaseUserInput === computerChoice) {
+                console.log("Ничья! Оба выбрали " + lowerCaseUserInput + ".");
+
+            } else {
+
+                if ((lowerCaseUserInput === "камень" && computerChoice === "ножницы") || (lowerCaseUserInput === "бумага" && computerChoice === "камень") || (lowerCaseUserInput === "ножницы" && computerChoice === "бумага")) {
+                    console.log("Поздравляю. Твоя победа!");
+
+                } else {
+                    console.log("Ты проиграл в этот раз, попробуйте еще!")
+                }
+            }
+
+        } else {
+            console.log("Неверный ввод! Пожалуйста, введите 'камень', 'ножницы' или 'бумага'.");
+        }
+
+    } else {
+        alert("Ты вышел из игры.");
+    }
+}
