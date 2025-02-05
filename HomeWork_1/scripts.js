@@ -155,23 +155,23 @@ function stoneScissorsPaper() {
             return options.includes(lowerCaseUserInput);
         }
 
-        if (isValidChoice(userInput)) {
+        if (isValidChoice(lowerCaseUserInput)) {
 
             if (lowerCaseUserInput === computerChoice) {
-                console.log("Ничья! Оба выбрали " + lowerCaseUserInput + ".");
+                alert(`Ничья! Оба выбрали ${lowerCaseUserInput}.`);
 
             } else {
 
-                if ((lowerCaseUserInput === "камень" && computerChoice === "ножницы") || (lowerCaseUserInput === "бумага" && computerChoice === "камень") || (lowerCaseUserInput === "ножницы" && computerChoice === "бумага")) {
-                    console.log("Поздравляю. Твоя победа!");
+                if ((lowerCaseUserInput === options[0] && computerChoice === options[1]) || (lowerCaseUserInput === options[2] && computerChoice === options[0]) || (lowerCaseUserInput === options[1] && computerChoice === options[2])) {
+                    alert("Поздравляю. Твоя победа!");
 
                 } else {
-                    console.log("Ты проиграл в этот раз, попробуйте еще!")
+                    alert("Ты проиграл в этот раз, попробуйте еще!")
                 }
             }
 
         } else {
-            console.log("Неверный ввод! Пожалуйста, введите 'камень', 'ножницы' или 'бумага'.");
+            alert("Неверный ввод! Пожалуйста, введите 'камень', 'ножницы' или 'бумага'.");
         }
 
     } else {
