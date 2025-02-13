@@ -6,11 +6,9 @@ let isHeaderVisible = true;
 
 buttonTask1El.addEventListener('click', function () {
     if (isHeaderVisible) {
-        titleTask1El.remove();
-        //      header.style.display = 'none';     ***       2-ой вариант
+        header.style.display = 'none';
     } else {
-        document.body.insertBefore(titleTask1El, buttonTask1El);
-        //      header.style.display = 'block';     ***      2-ой вариант
+        header.style.display = 'block';
     }
 
     isHeaderVisible = !isHeaderVisible;
@@ -58,12 +56,12 @@ buttonTask5El.addEventListener('click', function () {
 
 //Задание №6
 
-const newParagraph = document.createElement('div');
-newParagraph.textContent = 'Новый параграф';
 const buttonTask6El = document.querySelector('.button_task6');
 
 buttonTask6El.addEventListener('click', function () {
-    document.body.appendChild(newParagraph);
+    const newParagraph = document.createElement('div');
+    newParagraph.textContent = 'Новый параграф';
+    document.body.append(newParagraph);
 });
 
 //Задание №7
@@ -72,5 +70,11 @@ const descriptionTask7El = document.querySelector('.description_task7');
 const buttonTask7El = document.querySelector('.button_task7');
 
 buttonTask7El.addEventListener('click', function () {
-    descriptionTask7El.remove();
+    if (descriptionTask7El) {
+        descriptionTask7El.remove();
+    }
+
+    else {
+        console.log("Элемент не найден.")
+    }
 });
