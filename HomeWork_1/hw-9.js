@@ -6,9 +6,9 @@ let isHeaderVisible = true;
 
 buttonTask1El.addEventListener('click', function () {
     if (isHeaderVisible) {
-        header.style.display = 'none';
+        titleTask1El.style.display = 'none';
     } else {
-        header.style.display = 'block';
+        titleTask1El.style.display = 'block';
     }
 
     isHeaderVisible = !isHeaderVisible;
