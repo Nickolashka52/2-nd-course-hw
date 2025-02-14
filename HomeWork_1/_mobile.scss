@@ -38,6 +38,14 @@
         }
     }
 
+    .running-strip__container {
+        display: none;
+    }
+
+    .running-strip-mobile__container {
+        display: inline-block;
+    }
+
     .games-discriptions {
         display: none;
     }

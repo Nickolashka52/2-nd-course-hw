@@ -178,3 +178,14 @@ function stoneScissorsPaper() {
         alert("Ты вышел из игры.");
     }
 }
+
+// Игра "Генератор случацных цветов"
+function randomColorGenerator() {
+
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+    const backgroundColorMiniGames = document.querySelector('.mini-games');
+    const backgroundColorGamesDescriptions = document.querySelector('.games-discriptions');
+    let randomColor = Math.floor(Math.random() * 6);
+    backgroundColorMiniGames.style.backgroundColor = colors[randomColor];
+    backgroundColorGamesDescriptions.style.backgroundColor = colors[randomColor];
+}
