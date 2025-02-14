@@ -2,16 +2,13 @@
 
 const titleTask1El = document.querySelector('.title_task1');
 const buttonTask1El = document.querySelector('.button_task1');
-let isHeaderVisible = true;
 
 buttonTask1El.addEventListener('click', function () {
-    if (isHeaderVisible) {
-        titleTask1El.style.display = 'none';
-    } else {
+    if (titleTask1El.style.display === 'none') {
         titleTask1El.style.display = 'block';
+    } else {
+        titleTask1El.style.display = 'none';
     }
-
-    isHeaderVisible = !isHeaderVisible;
 });
 
 //Задание №2
