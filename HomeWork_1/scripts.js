@@ -185,7 +185,45 @@ function randomColorGenerator() {
     const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
     const backgroundColorMiniGames = document.querySelector('.mini-games');
     const backgroundColorGamesDescriptions = document.querySelector('.games-discriptions');
+    const backgroundColorMiniGamesMobile = document.querySelector('.mini-games-mobile');
+
     let randomColor = Math.floor(Math.random() * 6);
     backgroundColorMiniGames.style.backgroundColor = colors[randomColor];
     backgroundColorGamesDescriptions.style.backgroundColor = colors[randomColor];
+    backgroundColorMiniGamesMobile.style.backgroundColor = colors[randomColor];
 }
+
+// Игры в мобильной версии
+const buttonMobileGame1 = document.querySelector('#button-mobile-game1');
+buttonMobileGame1.addEventListener('click', guessTheNumber);
+
+const buttonMobileGame2 = document.querySelector('#button-mobile-game2');
+buttonMobileGame2.addEventListener('click', simpleArithmetic);
+
+const buttonMobileGame3 = document.querySelector('#button-mobile-game3');
+buttonMobileGame3.addEventListener('click', turnTheTextOver);
+
+const buttonMobileGame4 = document.querySelector('#button-mobile-game4');
+buttonMobileGame4.addEventListener('click', simpleQuiz);
+
+const buttonMobileGame5 = document.querySelector('#button-mobile-game5');
+buttonMobileGame5.addEventListener('click', stoneScissorsPaper);
+
+const buttonMobileGame6 = document.querySelector('#button-mobile-game6');
+buttonMobileGame6.addEventListener('click', randomColorGenerator);
+
+// Плавный скролл
+const smoothScrolls = document.querySelectorAll('.smooth-scrolling');
+
+for (const smoothScroll of smoothScrolls) {
+    smoothScroll.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    })
+};
