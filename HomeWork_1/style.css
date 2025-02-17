@@ -307,6 +307,7 @@ body {
   line-height: 141.69%;
   letter-spacing: 0%;
   text-align: center;
+  cursor: pointer;
 }
 .game-card-mini-games__button:hover {
   background-color: white;

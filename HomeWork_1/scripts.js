@@ -5,10 +5,23 @@ function guessTheNumber() {
     let attempts = 0;
 
     while (userNumber !== randomNumber) {
-        userNumber = parseInt(prompt("Мы загадали число от 1 до 100. Попробуйте его отгадать."));
+        userNumber = prompt("Мы загадали число от 1 до 100. Попробуйте его отгадать.");
+
+        if (userNumber === null) {
+            alert("Вы вышли из игры.");
+            return;
+        };
+
+        userNumber = parseInt(userNumber);
         attempts++;
 
-        if (userNumber < randomNumber) {
+        if (isNaN(userNumber)) {
+            alert("Пожалуйста, введите число.");
+            attempts--;
+        } else if (userNumber < 1 || userNumber > 100) {
+            alert("Число должно быть в диапазоне от 1 до 100. Попробуйте еще раз!");
+            attempts--;
+        } else if (userNumber < randomNumber) {
             alert("Ваше число меньше загаданного. Попробуйте еще раз!");
         } else if (userNumber > randomNumber) {
             alert("Ваше число больше загаданного. Попробуйте еще раз!");
