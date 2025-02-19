@@ -437,8 +437,9 @@ body {
     display: none;
   }
   .running-strip-mobile__container {
-    display: inline-block;
+    display: inline-flex;
     overflow: hidden;
+    max-width: 100%;
   }
   .games-discriptions {
     display: none;

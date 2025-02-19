@@ -43,8 +43,9 @@
     }
 
     .running-strip-mobile__container {
-        display: inline-block;
+        display: inline-flex;
         overflow: hidden;
+        max-width: 100%;
     }
 
     .games-discriptions {
