@@ -114,7 +114,7 @@ body {
 }
 
 .running-strip {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 51px;
   white-space: nowrap;
@@ -132,6 +132,7 @@ body {
 }
 .running-strip__container {
   background: rgb(188, 236, 48);
+  overflow: hidden;
 }
 
 .running-strip-mobile {
@@ -141,7 +142,7 @@ body {
   white-space: nowrap;
   padding-top: 16px;
   padding-bottom: 16px;
-  animation: marquee 5s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 .running-strip-mobile__text {
   color: rgb(32, 32, 39);
@@ -306,6 +307,7 @@ body {
   line-height: 141.69%;
   letter-spacing: 0%;
   text-align: center;
+  cursor: pointer;
 }
 .game-card-mini-games__button:hover {
   background-color: white;
@@ -435,7 +437,9 @@ body {
     display: none;
   }
   .running-strip-mobile__container {
-    display: inline-block;
+    display: inline-flex;
+    overflow: hidden;
+    max-width: 100%;
   }
   .games-discriptions {
     display: none;
